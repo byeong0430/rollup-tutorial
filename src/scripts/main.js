@@ -1,13 +1,17 @@
-// Import a couple modules for testing.
-import { sayHelloTo } from './modules/mod1';
-import addArray from './modules/mod2';
+// Load stylesheet
+import '../styles/main.scss';
 
-// Run some functions from our imported modules.
-const result1 = sayHelloTo('Jason');
-const result2 = addArray([1, 2, 3, 4]);
+// Add a debugger
+import debug from 'debug';
+const log = debug('app:log');
 
-// Print the results on the page.
-const printTarget = document.getElementsByClassName('debug__output')[0];
+// Disable logging in production
+if (ENV !== 'production') {
+  debug.enable('*');
+  log('Logging is enabled!');
 
-printTarget.innerText = `sayHelloTo('Jason') => ${result1}\n\n`;
-printTarget.innerText += `addArray([1, 2, 3, 4]) => ${result2}`;
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+    ':35729/livereload.js?snipver=1"></' + 'script>');
+} else {
+  debug.disable();
+}

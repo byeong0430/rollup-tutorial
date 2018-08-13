@@ -1,3 +1,3 @@
-# Learn Rollup.js
+# Crypto-calculator
 
-This is an example project to accompany a tutorial on using [Rollup](http://rollupjs.org/).
+Crypto-calculator is a simple, full-stack web application that allows users to view, buy, and sell crypto currencies on QuadrigaCX and Kraken.

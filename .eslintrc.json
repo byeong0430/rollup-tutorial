@@ -3,7 +3,7 @@
     "browser": true,
     "es6": true
   },
-  "globals":{
+  "globals": {
     "ENV": true
   },
   "extends": "eslint:recommended",
@@ -18,6 +18,8 @@
     "react"
   ],
   "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "indent": [
       "error",
       2
